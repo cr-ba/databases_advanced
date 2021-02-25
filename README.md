@@ -30,3 +30,10 @@ En om het script dan effectief te runnen:
 ```bash
 python3 scraping.py
 ```
+
+## week 2: Data naar Mongodb sturen
+
+pymongo installeren
+```bash
+pip3 install pymongo
+```
