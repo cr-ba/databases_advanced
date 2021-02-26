@@ -37,3 +37,20 @@ pymongo installeren
 ```bash
 pip3 install pymongo
 ```
+installeer mongo db (zie slides)
+
+Mongodb starten
+```bash
+mongo
+```
+installeer compass
+```bash
+wget -4 https://downloads.mongodb.com/compass/mongodb-compass_1.25.0_amd64.deb
+sudo dpkg -i mongodb-compass_1.25.0_amd64.deb
+```
+start compass
+```bash
+mongodb-compass
+```
+
+en run tenslotte het nieuwe script scraping_week2.py. Elke minuut wordt de grootste transactie weggeschreven naar mongodb.
