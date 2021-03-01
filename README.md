@@ -25,6 +25,10 @@ Scraping.py staat in de documents folder van het VM (in mijn geval toch). Om het
 ```bash
 Cd home/user/Documents
 ```
+of
+```bash
+cd ~/Documents
+```
 
 En om het script dan effectief te runnen:
 ```bash
