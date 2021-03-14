@@ -89,3 +89,26 @@ redis-cli shutdown
 ```
 
 scraping_week3.py scraped en stuurt alle data door naar redis elke 60 seconden. parser.py haalt elke 60 seonden alle data uit redis en selecteert de data van de grootste transactie, deze data wordt naar mongodb gestuurd.
+
+## week 4: redis in docker container + mongodb in dockercontainer
+
+redis en mongo installeren op docker:
+```bash
+Sudo docker pull redis
+Sudo docker install mongo
+```
+docker container Redis runnen:
+```bash
+sudo docker run --name my-first-redis -d redis
+```
+Docker container runnen:
+```bash
+Sudo docker run -d -p 27017:27017 --name m1 mongo
+```
+Here, one of the important part is -p option:
+-p 27017:27107 exposes port 27017 so we can connect to mongodb instance from our local machine.
+
+Status van docker checken:
+Sudo docker ps
+
+scraper_week4 en parser_week4 runnen via terminal command. Zowel redis als mongo staan in aparte docker containers.
