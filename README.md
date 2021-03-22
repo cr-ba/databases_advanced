@@ -112,3 +112,71 @@ Status van docker checken:
 Sudo docker ps
 
 scraper_week4 en parser_week4 runnen via terminal command. Zowel redis als mongo staan in aparte docker containers.
+
+## week5: alles vanuit 1 container
+
+via terminal cd zetten naar w5 (map in documents waar alles ingezet zal worden
+
+opnieuw builden (altijd als je iets verandert hebt). Adhv dockerfile in w5 map wordt de container gebuild
+```bash
+Docker build -t 21test .
+```
+image runnen
+```bash
+docker run 21test
+```
+nieuwe terminal openen
+
+in container gaan
+```bash
+docker exec -it *naam van container* bash
+```
+redis starten
+```bash
+redis-server
+```
+nieuwe terminal openen
+
+in container gaan
+```bash
+docker exec -it *naam van container* bash
+```
+
+mongodb initaliseren
+```bash
+mongod
+```
+
+nieuwe terminal openen
+
+in container gaan
+```bash
+docker exec -it *naam van container* bash
+```
+
+mongodb starten
+```bash
+mongo
+```
+
+nieuwe terminal openen
+
+in container gaan
+```bash
+docker exec -it *naam van container* bash
+```
+scraper runnen
+```bash
+python3 scraping_week4.py
+```
+nieuwe terminal openen
+
+in container gaan
+```bash
+docker exec -it *naam van container* bash
+```
+parser runnen
+```bash
+python3 parser_week4.py
+```
+info van grootste transactiew wordt nu elke minuut geprint
