@@ -127,7 +127,7 @@ docker run 21test
 ```
 nieuwe terminal openen
 
-in container gaan
+in container gaan. (naam van container vind je met "docker ps" command -> geeft alle containers
 ```bash
 docker exec -it *naam van container* bash
 ```
